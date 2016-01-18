@@ -1,6 +1,7 @@
 * {
    outline: 1px solid red !important;
 }
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -8,7 +9,13 @@
     box-sizing: border-box;
 } 
 
-.screenshot {
+.app {
+    display: flex;
+}
+
+.image {
+    border-color: white;
+    border: 100px;
     max-width: 460px;
 }
 
