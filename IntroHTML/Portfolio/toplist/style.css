@@ -6,12 +6,30 @@
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-} 
+}
 
-.screenshot {
-    max-width: 460px;
+.app {
+    display : flex;
+}
+
+.title {
+    max-width: 1000px;
+    color: white;
+    background: #33BEBE;
+
+}
+
+.image {
+    margin: 5px 5px 5px 5px;
+    max-width: 400px;
+    max-height: 400px;
+    border: solid white;
+    border-right-width: 10px;
 }
 
 .description {
-    max-width: 705px;
+    margin: 5px 5px 5px 5px;
+    max-width: 500px;
+    border: solid white;
+    border-width: 10px;
 }
