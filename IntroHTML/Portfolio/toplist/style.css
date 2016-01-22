@@ -1,6 +1,7 @@
 * {
    outline: 1px solid red !important;
 }
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -19,12 +20,23 @@
 
 }
 
+<<<<<<< HEAD
 .image {
     margin: 5px 5px 5px 5px;
     max-width: 400px;
     max-height: 400px;
     border: solid white;
     border-right-width: 10px;
+=======
+.app {
+    display: flex;
+}
+
+.image {
+    border-color: white;
+    border: 100px;
+    max-width: 460px;
+>>>>>>> 340358e5172013c4f5e8f97e91fbc4f3812e5df4
 }
 
 .description {
