@@ -1,3 +1,10 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -17,6 +24,12 @@ h1, h2, h3, h4, h5 {
 
 header, nav, footer, section, article, div {
   box-sizing: border-box;
+}
+
+content {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
 }
 
 ul {
@@ -53,7 +66,8 @@ ul {
 }
 
 .header__inner {
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -81,13 +95,15 @@ ul {
  */
 
 .nav {
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .nav__list {
   width: 100%;
+  max-width: 800px;
   padding: 0;
   margin: 0;
 }
@@ -105,6 +121,7 @@ ul {
 .nav a {
   text-decoration: none;
   color: #616161;
+  padding: 1.5em;
 }
 
 .nav a:hover {
@@ -121,7 +138,8 @@ ul {
 
 main {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -141,7 +159,8 @@ main {
 
 .hero {
   float: left;
-  width: 480px;
+  width: 100%;
+  max-width: 800px;
   position: relative;
   background-image: url("./images/dog.jpg");
   background-size: cover;
@@ -169,7 +188,8 @@ main {
 
 .top-news {
   float: right;
-  width: 320px;
+  width: 100%;
+  max-width: 800px;
   height: 300px;
   border-bottom: 1px solid #E0E0E0;
   padding: 1em;
@@ -199,6 +219,7 @@ main {
 .top-news__item a {
   text-decoration: none;
   color: #666;
+  padding: 1.5em;
 }
 
 .top-news__item a:hover,
@@ -214,13 +235,15 @@ main {
  */
 
 .scores {
-  width: 480px;
   float: left;
+  width: 100%;
+  max-width: 800px;
   padding-top: 1em;
 }
 
 .scores__table {
   width: 100%;
+  max-width: 800px;
   border-collapse: collapse;
 }
 
@@ -264,7 +287,8 @@ main {
 
 .weather {
   float: right;
-  width: 320px;
+  width: 100%;
+  max-width: 800px;
   padding: 1em;
 }
 
@@ -280,7 +304,8 @@ main {
 }
 
 .weather__today {
-  width: 60%;
+  width: 100%;
+  max-width: 800px;
   vertical-align: middle;
 }
 
@@ -300,6 +325,7 @@ main {
 .weather__next__item {
   display: inline-block;
   width: 20%;
+  max-width: 160px;
   text-align: center;
 }
 
@@ -309,6 +335,7 @@ main {
 
 .weather__next__image {
   width: 100%;
+  max-width: 800px;
 }
 
 
@@ -341,6 +368,7 @@ main {
 .snippet__title a {
   text-decoration: none;
   color: #666;
+  padding: 1.5em;
 }
 
 .snippet__title a:hover,
@@ -359,6 +387,7 @@ footer {
   border-top: 1px solid #E0E0E0;
   padding: 1em;
   width: 100%;
+  max-width: 800px;
 }
 
 footer li {
@@ -369,4 +398,5 @@ footer li {
 footer a {
   text-decoration: none;
   color: #333;
+  padding: 1.5em;
 }
