@@ -73,7 +73,7 @@ ul {
 }
 
 .header__logo {
-  height: 72px;
+  width: 15%;
   margin-right: 1em;
   vertical-align: top;
   margin-top: 12px;
@@ -81,7 +81,7 @@ ul {
 
 .header__title {
   font-weight: 300;
-  font-size: 4em;
+  font-size: 3vw;
   margin: 0.5em 0.25em;
   display: inline-block;
   color: #212121;

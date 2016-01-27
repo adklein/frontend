@@ -4,9 +4,57 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Brighton Times</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="main.css">
+    
+    <style type="text/css">
+    
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .content {
+        width: 100%;
+    }
+        
+        
+        
+    @media screen and (max-width: 799px) {
+        .content, .header {
+        width: 100%;
+        }
+        .header__title {
+        font-size: 8.5vw;
+        }
+    }    
+        
+        
+    @media screen and (min-width: 800px) {
+        .content, .header {
+          width: 800px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .header__title {
+        font-size: 6em;
+        }
+        
+        .hero, .news.top-news {
+          width: 50%;
+        }
+        .scores, .weather {
+          width: 50%;
+        }
+        .news.recent-news {
+          width: 100%;
+        }
+        
+        
+    }
+    </style>
   </head>
   <body>
 
