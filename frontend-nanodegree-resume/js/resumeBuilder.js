@@ -21,7 +21,47 @@ This is empty on purpose! Your code to build the resume will go here.
  
  var formattedName = HTMLheaderName.replace("%data%","Aaron Klein");
  
- var formattedRole = HTMLheaderRole.replace("%data%","Full-Stack Web Dev");
+ var formattedRole = HTMLheaderRole.replace("%data%","Full-Stack Data Scientist");
+ 
+ var contactInfo = {"email" : "adklein (at) umich (dot) edu", "phone" : "604-767-6996"};
+ 
+ var pictureURL = "NaN";
+ 
+ var welcome = "Welcome to my Website!";
+ 
+ var skills = ["Python","JavaScript","Matlab","R","SQL"];
  
  $("#header").prepend(formattedRole);
  $("#header").prepend(formattedName);
+ 
+ var bio = {"name": "Aaron Klein", 
+	"role": "Full Stack Data Scientist", 
+	"contactinfo" : contactInfo, 
+	"picture" : pictureURL, 
+	"welcomeMessage" : welcome, 
+	"skills" : skills
+};
+ 
+ $("#main").append(bio.name);
+ $("#main").append(bio.role);
+ $("#main").append(bio.contactinfo.email);
+ 
+ var work = {};
+ var education = {};
+ 
+ education.name = "Imperial College London";
+ education.Degree = "Masters of Science";
+ education.Year = 2015;
+ education.City = "London";
+ 
+ work.position = "Analyst/Researcher";
+ work.employer = "Klein Lawyers";
+ work.Year = 2015;
+ work.City = "Vancouver";
+ 
+ $("#main").append(work.position);
+ $("#main").append(education.name);
+ 
+ 
+ 
+ 
