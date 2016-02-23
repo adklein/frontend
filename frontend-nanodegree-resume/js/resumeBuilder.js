@@ -110,6 +110,9 @@ if(bio.skills.length > 0) {
 for (job in work.jobs) {
 
 	$("#workExperience").append(HTMLworkStart);
+	$("#workExperience").append(HTMLworkDates);
+	$("#workExperience").append(HTMLworkLocation);
+	$("#workExperience").append(HTMLworkDescription);
 	
 	var formattedEmployers = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
 	var formattedworkTitle = HTMLworkTitle.replace("%data%",work.jobs[job].position);
