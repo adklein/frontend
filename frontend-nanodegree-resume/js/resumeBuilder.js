@@ -46,7 +46,16 @@ This is empty on purpose! Your code to build the resume will go here.
  $("#main").append(bio.role);
  $("#main").append(bio.contacts.email);
  
- var work = {};
+ var work = {
+	 "jobs": [
+	 {
+		"position" : "Analyst/Researcher",
+		"employer" : "Klein Lawyers",
+		"Year" : "2015",
+		"City" : "Vancouver"
+	 }
+	 ]
+ };
  var education = {
      "schools": [
      {
@@ -68,11 +77,7 @@ This is empty on purpose! Your code to build the resume will go here.
  //education.Degree = "Masters of Science";
  //education.Year = 2015;
  //education.City = "London";
- 
- work.position = "Analyst/Researcher";
- work.employer = "Klein Lawyers";
- work.Year = 2015;
- work.City = "Vancouver";
+
  
  var projects = {
      "project": [
@@ -85,8 +90,8 @@ This is empty on purpose! Your code to build the resume will go here.
     ]
  };
  
- $("#main").append(work.position);
- $("#main").append(education.name);
+ //$("#main").append(work.position);
+ //$("#main").append(education.name);
  
 if(bio.skills.length > 0) {
 	$("#header").append(HTMLskillsStart);
@@ -101,6 +106,17 @@ if(bio.skills.length > 0) {
 	formattedSkills = HTMLskills.replace("%data%",bio.skills[4]);
 	$("#skills").append(formattedSkills);
 	}
+	
+for (job in work.jobs) {
+
+	$("#workExperience").append(HTMLworkStart);
+	
+	var formattedEmployers = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
+	var formattedworkTitle = HTMLworkTitle.replace("%data%",work.jobs[job].position);
+	var formattedEmployTitle = formattedEmployers + formattedworkTitle;
+	
+	$(".work-entry:last").append(formattedEmployTitle);
+}
  
  
  
