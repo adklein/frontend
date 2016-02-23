@@ -88,6 +88,20 @@ This is empty on purpose! Your code to build the resume will go here.
  $("#main").append(work.position);
  $("#main").append(education.name);
  
+if(bio.skills.length > 0) {
+	$("#header").append(HTMLskillsStart);
+	var formattedSkills = HTMLskills.replace("%data%",bio.skills[0]);
+	$("#skills").append(formattedSkills);
+	formattedSkills = HTMLskills.replace("%data%",bio.skills[1]);
+	$("#skills").append(formattedSkills);
+	formattedSkills = HTMLskills.replace("%data%",bio.skills[2]);
+	$("#skills").append(formattedSkills);
+	formattedSkills = HTMLskills.replace("%data%",bio.skills[3]);
+	$("#skills").append(formattedSkills);
+	formattedSkills = HTMLskills.replace("%data%",bio.skills[4]);
+	$("#skills").append(formattedSkills);
+	}
+ 
  
  
  
