@@ -51,8 +51,9 @@ This is empty on purpose! Your code to build the resume will go here.
 	 {
 		"position" : "Analyst/Researcher",
 		"employer" : "Klein Lawyers",
-		"Year" : "2015",
-		"City" : "Vancouver"
+		"Year" : "October 2015 - Present",
+		"City" : "Vancouver",
+        "Description" : "Perform analysis on class action financing and workflow using Excel, Python and MySQL.  Perform case research for Woodlands residential abuse class action."
 	 }
 	 ]
  };
@@ -107,20 +108,29 @@ if(bio.skills.length > 0) {
 	$("#skills").append(formattedSkills);
 	}
 	
-for (job in work.jobs) {
+function displayWork() {
+    for (job in work.jobs) {
 
-	$("#workExperience").append(HTMLworkStart);
-	$("#workExperience").append(HTMLworkDates);
-	$("#workExperience").append(HTMLworkLocation);
-	$("#workExperience").append(HTMLworkDescription);
+        $("#workExperience").append(HTMLworkStart);
 	
-	var formattedEmployers = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
-	var formattedworkTitle = HTMLworkTitle.replace("%data%",work.jobs[job].position);
-	var formattedEmployTitle = formattedEmployers + formattedworkTitle;
-	
-	$(".work-entry:last").append(formattedEmployTitle);
+        var formattedEmployers = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
+        var formattedworkTitle = HTMLworkTitle.replace("%data%",work.jobs[job].position);
+        var formattedEmployTitle = formattedEmployers + formattedworkTitle;
+    
+        var formattedworkDates = HTMLworkDates.replace("%data%",work.jobs[job].Year);
+        //var formattedworkLocation = HTMLworkLocation.replace("%data%",work.jobs[job].City);
+        var formattedworkDescription = HTMLworkLocation.replace("%data%",work.jobs[job].Description);
+    
+        $(".work-entry:last").append(formattedEmployTitle);
+    
+        $(".work-entry:last").append(formattedworkDates);
+        $(".work-entry:last").append(formattedworkDescription);
+        //$(".work-entry:last").append(formattedworkLocation);
+    }
 }
  
+ 
+ displayWork();
  
  
  
