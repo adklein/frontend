@@ -132,5 +132,17 @@ function displayWork() {
  
  displayWork();
  
+ function inName(name) {
+     splitName = name.split(" ");
+     lastName = splitName[1].toUpperCase();
+     firstName = splitName[0].toLowerCase();
+     firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1).toLowerCase();
+     fullName = firstName + " " + lastName;
+     return fullName;
+}
+
+console.log(inName("Aaron Klein"));
+
+ $("#main").append(internationalizeButton)
  
  
