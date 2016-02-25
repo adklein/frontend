@@ -119,7 +119,7 @@ function displayWork() {
     
         var formattedworkDates = HTMLworkDates.replace("%data%",work.jobs[job].Year);
         //var formattedworkLocation = HTMLworkLocation.replace("%data%",work.jobs[job].City);
-        var formattedworkDescription = HTMLworkLocation.replace("%data%",work.jobs[job].Description);
+        var formattedworkDescription = HTMLworkDescription.replace("%data%",work.jobs[job].Description);
     
         $(".work-entry:last").append(formattedEmployTitle);
     
@@ -143,7 +143,8 @@ function displayWork() {
 
 console.log(inName("Aaron Klein"));
 
- $("#main").append(internationalizeButton)
+ $("#main").append(internationalizeButton);
+
  
  projects.display = function() {
      for (proj in projects.project) {
@@ -165,4 +166,6 @@ console.log(inName("Aaron Klein"));
 //        //$(".work-entry:last").append(formattedworkLocation);
     }
 }
+ 
+  projects.display();
  
