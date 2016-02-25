@@ -145,4 +145,24 @@ console.log(inName("Aaron Klein"));
 
  $("#main").append(internationalizeButton)
  
+ projects.display = function() {
+     for (proj in projects.project) {
+
+        $("#projects").append(HTMLprojectStart);
+	
+        var formattedprojectTitle = HTMLprojectTitle.replace("%data%",projects.project[proj].title);
+//        var formattedworkTitle = HTMLworkTitle.replace("%data%",work.jobs[job].position);
+//        var formattedEmployTitle = formattedEmployers + formattedworkTitle;
+//    
+        var formattedprojectDates = HTMLprojectDates.replace("%data%",projects.project[proj].date);
+//        //var formattedworkLocation = HTMLworkLocation.replace("%data%",work.jobs[job].City);
+        var formattedprojectDescription = HTMLprojectDescription.replace("%data%",projects.project[proj].description);
+    
+        $(".project-entry:last").append(formattedprojectTitle);
+    
+        $(".project-entry:last").append(formattedprojectDates);
+        $(".project-entry:last").append(formattedprojectDescription);
+//        //$(".work-entry:last").append(formattedworkLocation);
+    }
+}
  
